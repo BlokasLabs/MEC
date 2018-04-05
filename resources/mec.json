@@ -13,6 +13,10 @@
             "port" :  7000
         },
 
+        "Kontrol" : {
+		    "listen port" : 8000
+		},
+
 
         "_eigenharp" : {
             "steal voices" : true,
