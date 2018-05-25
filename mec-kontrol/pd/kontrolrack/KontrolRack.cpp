@@ -198,6 +198,9 @@ void *KontrolRack_new(t_symbol* sym, int argc, t_atom *argv) {
     } else if (device == "simpleosc") {
         post("KontrolRack: device = %s", device.c_str());
         x->device_ = std::make_shared<SimpleOsc>();
+    } else if (device == "kontrol") {
+        post("KontrolRack: device = %s", device.c_str());
+        x->device_ = std::make_shared<KontrolDevice>();
     } else if (device == "none") {
         post("KontrolRack: not using a device");
     } else {
