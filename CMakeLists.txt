@@ -56,7 +56,7 @@ endif (APPLE)
 ## setup rpath for linux and macos
 set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
 if (NOT APPLE)
-    #set(CMAKE_INSTALL_RPATH "$ORIGIN/:$ORIGIN/../lib")
+    set(CMAKE_INSTALL_RPATH "$ORIGIN/:$ORIGIN/../lib")
 else()
   set(CMAKE_INSTALL_NAME_DIR "@rpath")
   set(CMAKE_INSTALL_RPATH "@executable_path/../lib;@loader_path")
