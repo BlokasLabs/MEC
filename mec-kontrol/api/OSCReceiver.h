@@ -95,6 +95,8 @@ public:
                         const EntityId &paramId,
                         unsigned bus);
 
+    void publishStart(ChangeSource src, unsigned numRacks);
+    void publishRackFinished(ChangeSource src, const EntityId &rackId);
 
     void updatePreset(ChangeSource src,
                       const EntityId &rackId,

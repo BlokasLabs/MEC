@@ -45,6 +45,8 @@ public:
     void assignModulation(ChangeSource, const Rack &, const Module &, const Parameter &, unsigned bus) override;
     void unassignModulation(ChangeSource, const Rack &, const Module &, const Parameter &, unsigned bus) override;
 
+    void publishStart(ChangeSource, unsigned numRacks) override;
+    void publishRackFinished(ChangeSource, const Rack &) override;
 
     bool isThisHost(const std::string &host, unsigned port) { return host == host_ && port == port_; }
 
